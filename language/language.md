@@ -3,6 +3,6 @@
 * https://github.com/leanprover/lean4
 
 # The Lean Language Reference
-* https://lean-lang.org/doc/reference/latest/
+* [The Lean Language Reference](./lean-lang-ref.md)
 
 # See Also

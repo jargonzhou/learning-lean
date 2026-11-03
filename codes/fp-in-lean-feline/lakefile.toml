@@ -1,0 +1,10 @@
+name = "fp-in-lean-feline"
+version = "0.1.0"
+defaultTargets = ["fp-in-lean-feline"]
+
+[[lean_lib]]
+name = "FpInLeanFeline"
+
+[[lean_exe]]
+name = "fp-in-lean-feline"
+root = "Main"

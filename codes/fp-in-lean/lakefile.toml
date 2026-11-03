@@ -1,0 +1,15 @@
+name = "fp-in-lean"
+version = "0.1.0"
+defaultTargets = ["fp-in-lean"]
+
+[[lean_lib]]
+name = "FpInLean"
+
+[[lean_lib]]
+name = "C1KnowLean"
+[[lean_lib]]
+name = "C2HelloWorld"
+
+[[lean_exe]]
+name = "fp-in-lean"
+root = "Main"

@@ -1,0 +1,12 @@
+{
+    "editor.semanticHighlighting.enabled": true,
+    "editor.semanticTokenColorCustomizations": {
+        "[Default Light+]": {
+            "rules": {
+                "function": "#ff0000",
+                "property": "#00ff00",
+                "variable": "#ff00ff"
+            }
+        }
+    },
+}
