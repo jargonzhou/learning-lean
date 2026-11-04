@@ -10,6 +10,11 @@ inductive MyBool where
   | true : MyBool
   | false : MyBool
 
+def myNot(b: MyBool): MyBool :=
+  match b with
+  | MyBool.true => MyBool.false
+  | MyBool.false => MyBool.true
+
 #eval MyBool.true
 #eval MyBool.false
 
@@ -47,3 +52,50 @@ def depth(p: Point3D): Float :=
 --------------------------------------------------------------------------------
 -- recursive functions
 --------------------------------------------------------------------------------
+
+def even(n: MyNat): MyBool :=
+  match n with
+  | MyNat.zero => MyBool.true
+  | MyNat.succ m => myNot (even m)
+
+#eval even MyNat.zero -- MyBool.true
+#eval even (MyNat.succ MyNat.zero) -- MyBool.false
+#eval even (MyNat.succ (MyNat.succ MyNat.zero)) -- MyBool.true
+
+def evenLoops(n : MyNat): MyBool :=
+  match n with
+  | MyNat.zero => MyBool.true
+  | MyNat.succ m => myNot (evenLoops m)
+
+#eval evenLoops MyNat.zero -- MyBool.true
+#eval evenLoops (MyNat.succ MyNat.zero) -- MyBool.false
+#eval evenLoops (MyNat.succ (MyNat.succ MyNat.zero)) -- MyBool.true
+
+def plus(m: MyNat)(n: MyNat): MyNat :=
+  match m with
+  | MyNat.zero => n
+  | MyNat.succ k => MyNat.succ (plus k n)
+
+def three: MyNat := MyNat.succ (MyNat.succ (MyNat.succ MyNat.zero))
+def two: MyNat := MyNat.succ (MyNat.succ MyNat.zero)
+
+#eval plus three two -- MyNat.succ (MyNat.succ (MyNat.succ (MyNat.succ (MyNat.succ MyNat.zero))))
+
+def times(m: MyNat)(n: MyNat): MyNat :=
+  match m with
+  | MyNat.zero => MyNat.zero
+  | MyNat.succ k => plus n (times k n)
+
+#eval times three two -- MyNat.succ (MyNat.succ (MyNat.succ (MyNat.succ (MyNat.succ (MyNat.succ (MyNat.zero))))))
+
+def divide(m: MyNat)(n: MyNat): MyNat :=
+  match m with
+  | MyNat.zero => MyNat.zero
+  | MyNat.succ k =>
+    match n with
+    | MyNat.zero => MyNat.zero
+    | MyNat.succ l =>
+        match even m with
+        | MyBool.true => MyNat.succ (divide k l)
+        | MyBool.false => divide k l
+#eval divide three two -- MyNat.succ (MyNat.zero)
