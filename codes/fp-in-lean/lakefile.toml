@@ -9,6 +9,8 @@ name = "FpInLean"
 name = "C1KnowLean"
 [[lean_lib]]
 name = "C2HelloWorld"
+[[lean_lib]]
+name = "C3OverloaddingAndTypeClasses"
 
 [[lean_exe]]
 name = "fp-in-lean"

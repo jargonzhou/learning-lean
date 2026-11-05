@@ -4,7 +4,14 @@
 # 1. Introduction/引言
 # 2. Elaboration and Compilation/细化与编译
 # 3. Interacting with Lean/与Lean交互
+
 # 4. The Type System/类型系统
+## 4.1. Functions
+## 4.2. Propositions
+## 4.3. Universes
+## 4.4. Inductive Types
+## 4.5. Quotients
+
 # 5. Source Files and Modules/源文件和模块
 
 ## 5.1. Encoding and Representation
@@ -58,18 +65,37 @@ opaque
 # 10. Type Classes/类型类
 # 11. Coercions/强制转换
 # 12. Run-Time Code/运行时代码
+
 # 13. Terms/项
+
 # 14. Tactic Proofs/策略证明
+## 14.1. Running Tactics
+## 14.2. Reading Proof States
+## 14.3. The Tactic Language
+## 14.4. Options
+## 14.5. Tactic Reference
+## 14.6. Targeted Rewriting with `conv`
+## 14.7. Naming Bound Variables
+## 14.8. Custom Tactics
+
+
 # 15. The Simplifier/化简器
 # 16. The `grind` tactic
 # 17. The `vcgen` tactic
 # 18. The `mvcgen` tactic
+
 # 19. Functors, Monads and `do`-Notation/函子, 单子与`do`记法
+
 # 20. Basic Propositions/基本命题
+
 # 21. Basic Types/基本类型
+
 # 22. IO/输入输出
+
 # 23. Iterators/迭代器
+
 # 24. Notations and Macros/记法与宏
+
 # 25. Build Tools and Distribution/构建工具与分发
 # 26. Linters and Code Quality/代码检查工具与代码质量
 # Validating a Lean Proof/验证Lean证明
